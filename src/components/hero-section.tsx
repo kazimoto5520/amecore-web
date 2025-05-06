@@ -60,7 +60,7 @@ const HeroSection = () => {
                                         src="/assets/mobile_app_mockup.png"
                                         alt="Mobile App Mockup"
                                         className='w-full h-auto object-cover'
-                                        // style={{ maxHeight: '300px' }}
+                                    // style={{ maxHeight: '300px' }}
                                     />
                                 </div>
                             </div>
