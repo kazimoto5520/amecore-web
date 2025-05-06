@@ -9,15 +9,15 @@ const HeroSection = () => {
         <>
             <motion.div className="fixed inset-0 bg-gradient-to-b from-[#081130] via-[#102a60] to-[#0a1c40] z-[-2]"
             />
-            <div className='container mx-auto pt-16 mt-16'>
+            <div className='container mx-auto pt-16 mt-16 h-screen'>
                 <div className='w-full'>
                     <div className='grid grid-cols-2 gap-8'>
                         {/* First column */}
                         <div className='flex flex-col p-6 rounded-2xl bg-primary/20 border border-primary/30 backdrop-blur-md shadow-lg h-full'>
                             <div className='flex flex-col flex-grow'>
                                 <div className='flex flex-col gap-1'>
-                                    <h1 className='text-4xl font-bold text-white'>Transforming <br /> Businesses Through Technology Solutions</h1>
-                                    <p className='text-gray-200 mt-4'>At Amecore Technologies, we are dedicated to providing innovative IT solutions that empower businesses to thrive in the digital age.</p>
+                                    <h1 className='text-4xl font-bold text-white'>Empowering Digital Growth <br /> with Smart Technology</h1>
+                                    <p className='text-gray-200 mt-4'>At Amecore Technologies, we craft cutting-edge IT solutions designed to accelerate business transformation, foster innovation, and drive sustainable success in a connected world.</p>
                                 </div>
                                 <div className='grid grid-cols-2 gap-4 my-8'>
                                     <div className='p-4 rounded-xl bg-primary/20 backdrop-blur-md border-primary/50 pb-12'>
@@ -36,18 +36,18 @@ const HeroSection = () => {
                         {/* Second column */}
                         <div className='flex flex-col'>
                             {/* Full-width image */}
-                            <div>
+                            {/* <div>
                                 <img
                                     src="/assets/bank_integration.png"
                                     alt="Bank Integration"
                                     className='w-full h-auto rounded-2xl shadow-lg'
                                 />
-                            </div>
+                            </div> */}
 
                             {/* Description and mobile app image */}
-                            <div className='grid grid-cols-2 gap-4 mt-8'>
+                            <div className='grid grid-cols-2 gap-4 h-full'>
                                 {/* Description */}
-                                <div className='p-6 rounded-2xl bg-primary/20 border border-primary/30 backdrop-blur-md shadow-lg'>
+                                <div className='p-6 rounded-2xl bg-primary/20 border border-primary/30 backdrop-blur-md shadow-lg h-full'>
                                     <h2 className='text-2xl font-bold text-white'>Seamless Bank Integration</h2>
                                     <p className='text-gray-200 mt-4'>
                                         Our solutions enable secure and efficient integration with banking systems, ensuring smooth financial operations for your business.
@@ -55,12 +55,12 @@ const HeroSection = () => {
                                 </div>
 
                                 {/* Mobile app image */}
-                                <div className='overflow-hidden rounded-2xl bg-primary/20 border border-primary/30 backdrop-blur-md shadow-lg'>
+                                <div className='overflow-hidden rounded-2xl bg-primary/20 border border-primary/30 backdrop-blur-md shadow-lg h-full'>
                                     <img
                                         src="/assets/mobile_app_mockup.png"
                                         alt="Mobile App Mockup"
                                         className='w-full h-auto object-cover'
-                                        style={{ maxHeight: '300px' }}
+                                        // style={{ maxHeight: '300px' }}
                                     />
                                 </div>
                             </div>

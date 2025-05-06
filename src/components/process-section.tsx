@@ -11,7 +11,7 @@ const ProcessSection = () => {
         {
             title: 'Innovation',
             description: 'We build with purpose and creativity. Our team is dedicated to exploring new ideas and pushing boundaries to deliver solutions that inspire and transform. By embracing change and fostering a culture of innovation, we ensure that our work remains relevant and impactful.',
-            image: 'https://plus.unsplash.com/premium_vector-1723818992666-16645110097b?q=80&w=3600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            image: '/assets/innovation_img.png'
         },
         {
             title: 'Integrity',
@@ -21,7 +21,7 @@ const ProcessSection = () => {
         {
             title: 'Collaboration',
             description: 'We grow together with our clients, communities, and partners. By fostering open communication and teamwork, we create an environment where everyone can contribute and thrive. Collaboration is at the heart of our success, enabling us to achieve shared goals and deliver exceptional results.',
-            image: 'https://plus.unsplash.com/premium_vector-1723818992666-16645110097b?q=80&w=3600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            image: '/assets/innovation_img.png'
         },
         {
             title: 'Excellence',
@@ -36,7 +36,7 @@ const ProcessSection = () => {
 
     return (
         <div className="bg-gray-100 mt-24">
-            <div className="container mx-auto py-16">
+            <div className="container mx-auto py-24">
                 <div className="grid grid-cols-4 gap-8">
                     {/* List Column */}
                     <div>
