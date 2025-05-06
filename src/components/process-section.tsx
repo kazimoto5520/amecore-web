@@ -37,6 +37,25 @@ const ProcessSection = () => {
     return (
         <div className="bg-gray-100 mt-24">
             <div className="container mx-auto py-24">
+                <div className="py-16 text-center">
+                    <motion.h2
+                        className="text-4xl lg:text-5xl font-bold mb-6"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                    >
+                        Our Values
+                    </motion.h2>
+                    <motion.div
+                        className="w-24 h-1 bg-primary mx-auto mb-10"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: 96 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    />
+
+                </div>
                 <div className="grid grid-cols-4 gap-8">
                     {/* List Column */}
                     <div>
@@ -48,11 +67,10 @@ const ProcessSection = () => {
                                 transition={{ duration: 0.3, delay: index * 0.1 }}
                                 whileHover={{ scale: 1.03 }}
                                 whileTap={{ scale: 0.98 }}
-                                className={`px-4 py-6 mb-4 cursor-pointer rounded-2xl transition-all duration-300 ${
-                                    activeIndex === index
+                                className={`px-4 py-6 mb-4 cursor-pointer rounded-2xl transition-all duration-300 ${activeIndex === index
                                         ? 'bg-gray-900 text-white shadow-xl'
                                         : 'bg-white text-gray-700'
-                                }`}
+                                    }`}
                                 onClick={() => handleItemClick(index)}
                             >
                                 <div className="flex justify-between items-center">
