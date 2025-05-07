@@ -7,7 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 import { Button } from './ui/button'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 type NavItem = {
   title: string
@@ -25,12 +25,13 @@ const Navbar = () => {
   const [navBackground, setNavBackground] = useState<string>("transparent")
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const router = useRouter();
-  const dropdownRefs = useRef<{[key: string]: React.RefObject<HTMLDivElement | null>}>({});
+  const pathname = usePathname();
+  const dropdownRefs = useRef<{ [key: string]: React.RefObject<HTMLDivElement | null> }>({});
 
   const { scrollYProgress } = useScroll()
 
   const navItems: NavItem[] = [
-    { title: "Home", href: "/home" },
+    { title: "Home", href: "/" },
     { title: "About", href: "/about" },
     {
       title: "Services",
@@ -89,7 +90,7 @@ const Navbar = () => {
         dropdownRefs.current[item.title] = React.createRef();
       }
     });
-  }, []);
+  }, [navItems]);
 
   const toggleDropdown = (e: React.MouseEvent, title: string) => {
     e.stopPropagation();
@@ -105,8 +106,8 @@ const Navbar = () => {
         const targetElement = event.target as Node;
 
         // Check if click target is outside the dropdown and its toggle button
-        if (dropdownElement && !dropdownElement.contains(targetElement) && 
-            !targetElement.parentElement?.classList.contains('dropdown-toggle')) {
+        if (dropdownElement && !dropdownElement.contains(targetElement) &&
+          !targetElement.parentElement?.classList.contains('dropdown-toggle')) {
           setOpenDropdown(null);
         }
       }
@@ -147,7 +148,7 @@ const Navbar = () => {
                     onClick={(e) => handleNavItemClick(e, item)}
                     className={cn(
                       "text-sm font-medium transition-colors flex items-center gap-1 dropdown-toggle",
-                      activeSection === item.href.substring(1)
+                      pathname === item.href
                         ? "text-primary"
                         : "text-black hover:text-primary"
                     )}
