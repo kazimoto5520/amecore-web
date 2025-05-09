@@ -68,7 +68,7 @@ const SponsorSection = () => {
     };
 
     return (
-        <div className='bg-gray-900 py-8'>
+        <div className='bg-gray-900/80 py-8'>
             <div className=''>
                 <div className='flex flex-col '>
                     {/* <div className='flex gap-2 items-center justify-center'>
